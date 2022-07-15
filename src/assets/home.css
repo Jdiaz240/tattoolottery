@@ -13,11 +13,17 @@ body {
    width: 100%;
 }
 
+#namePlate{
+   margin-left: 5%;
+}
+
 .Landing {
-   margin: 10%;
    border: 1px solid black;
    text-align: center;
    width: fit-content;
+   position: fixed;
+   bottom: 40%;
+   left: 55%;
 }
 
 .footer {

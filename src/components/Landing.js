@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
 
 export default function Landing() {
   return (
@@ -6,6 +7,7 @@ export default function Landing() {
         <h3>Lunar Kitty Tattoos Presents</h3>
         <h1>Tattoo Lottery</h1>
         <h4>In support of mental health awareness</h4> 
+        <Button>click here to enter</Button>
     </div>
   )
 }
