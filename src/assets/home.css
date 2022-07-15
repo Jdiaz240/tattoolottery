@@ -1,18 +1,32 @@
 body {
     background-image: url('./images/bg.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    
+    background-position: center center;
+    background-attachment: fixed; 
 }
 
 .header {
-   border: 1px solid black;
-   
-} 
+   width: 100%;
+   position: fixed;
+   top: 0;
+   width: 100%;
+}
 
-.options {
-   text-align: right;
-   width: auto;
-   padding-left: 0;
-   margin: 0;
+.Landing {
+   margin: 10%;
+   border: 1px solid black;
+   text-align: center;
+   width: fit-content;
+}
+
+.footer {
+   border: 1px solid black;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+}
+
+#footer {
+  margin: 0 auto;
 }
