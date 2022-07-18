@@ -1,0 +1,22 @@
+#gameBox {
+   width: fit-content;
+   position: fixed;
+   bottom: 18%;
+   left: 55%;
+}
+
+/* .container {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+
+table td {
+    /* border: 1px solid black; */
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+.moon {
+  background-color: #000000;
+}
