@@ -1,12 +1,12 @@
 import './gameBox.css'
-import Button from 'react-bootstrap/Button';
-// import Moon from '../../assets/images/moon.gif'
+// import Button from 'react-bootstrap/Button';
+import Moon from '../../assets/images/moon.gif'
 
 export default function GameBox() {
     const Cell = ({ num }) => {
         
          
-        return <td><Button>{num}</Button></td>
+        return <td><img src={Moon} alt='moon' height={20} width={25}></img>{num}</td>
     }
     return (
         <>
