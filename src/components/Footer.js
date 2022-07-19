@@ -14,9 +14,9 @@ export default function Footer() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                            <Dropdown.Item href="https://mentalhealthfoundation.org/donate/">Mental Health Foundation</Dropdown.Item>
+                            <Dropdown.Item href="https://www.mentalhealth.gov/">MentalHealth.gov</Dropdown.Item>
+                            <Dropdown.Item href="https://www.mentalhealthfirstaid.org/mental-health-resources/">MentalHealthFirstAid.org</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Container>

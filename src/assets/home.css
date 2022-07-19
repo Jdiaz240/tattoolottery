@@ -6,6 +6,7 @@ body {
     background-attachment: fixed; 
 }
 
+
 .header {
    width: 100%;
    position: fixed;
@@ -13,13 +14,18 @@ body {
    width: 100%;
 }
 
+.links {
+   color: rgb(196, 196, 196) !important;
+}
 
-.Landing { 
+
+.Landing {
    text-align: center;
-   /* width: fit-content; */
+   width: fit-content; 
    position: fixed;
    bottom: 30%;
    left: 55%;
+   box-shadow: 10px 10px 10px;
 }
 
 .footer {
