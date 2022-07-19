@@ -2,18 +2,17 @@
    width: fit-content;
    position: fixed;
    bottom: 18%;
-   left: 55%;
+   left: 28%;
+   text-align: center;
 }
 
-/* .container {
-    display: flex;
+.container {
+    display: inline-flex;
     justify-content: flex-end;
-} */
-
+}
 
 table td {
-    /* border: 1px solid black; */
-    width: 2rem !important;
+    width: fit-content !important;
     height: 2rem !important;
 }
 
