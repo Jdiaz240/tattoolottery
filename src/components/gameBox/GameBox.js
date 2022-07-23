@@ -1,11 +1,17 @@
 import './gameBox.css'
-import Button from 'react-bootstrap/Button';
-import Moon from '../../assets/images/moon.gif'
+import { useState } from 'react'
+// import Button from 'react-bootstrap/Button';
+import  ShoppingCart from '../ShoppingCart';
+import Cell from '../Cell'
+
+
 
 export default function GameBox() {
-    const Cell = ({ num }) => {
-        return <td><Button variant='dark'><img src={Moon} alt='moon' height={20} width={25}></img>{num}</Button></td>
-    }
+    let [ cartCount, setCount] = useState(0);
+    let addCount = () => {        
+        setCount(count => count + 1 )
+    } 
+
     return (
         <>
             <div className='container'>
@@ -24,7 +30,6 @@ export default function GameBox() {
                                 <Cell num={8} />
                                 <Cell num={9} />
                                 <Cell num={10} />
-
                             </tr>
                             <tr>
                                 <Cell num={11} />
@@ -136,15 +141,11 @@ export default function GameBox() {
                             </tr>
                         </tbody>
                     </table>
+                    <ShoppingCart cartCount={cartCount}/>
+
                 </div>
-                    {/* <div className='rules'>
-                        <h4>Rules of The Game:</h4>
-                        <p>Each number is worth $20, and you can pick as many numbers as you want! <br />
-                            Simply click on numbers you want to add them to your cart and then checkout <br />
-                            Half of all proceeds will be donated to the Mental Health Foundation</p>
-                    </div> */}
-                
+
             </div>
         </>
-    ) 
+    )
 }

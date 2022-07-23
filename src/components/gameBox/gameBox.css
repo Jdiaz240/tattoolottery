@@ -5,9 +5,12 @@
    left: 28%;
    text-align: center;
 }
+.numBut {
+  width: 100%;
+}
 
 .container {
-    display: inline-flex;
+    display: inline;
     justify-content: flex-end;
 }
 
