@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 
 function ShoppingCart(props) {
   let cartCount = props.cartCount

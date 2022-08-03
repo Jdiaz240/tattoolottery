@@ -1,13 +1,13 @@
 import Moon from '../assets/images/moon.gif'
 import Button from 'react-bootstrap/Button'
 
-const Cell = ({ num }) => {
 
+const Cell = (props) => {
     return (
         <td>
-            <Button variant='dark' className='numBut' >
+            <Button onClick={props.addCount} variant='dark' className='numBut' >
                 <img src={Moon} alt='moon' height={20} width={25}></img>
-                {num}
+                {props.num}
             </Button>
         </td>
     )
