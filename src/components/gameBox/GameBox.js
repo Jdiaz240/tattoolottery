@@ -1,5 +1,5 @@
 import './gameBox.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import Button from 'react-bootstrap/Button';
 import  ShoppingCart from '../ShoppingCart';
 import Cell from '../Cell'
@@ -7,9 +7,12 @@ import Cell from '../Cell'
 
 
 export default function GameBox() {
-    let [ cartCount, setCount] = useState(0);
-    let addCount = () => {        
-        setCount(count => count + 1 )
+    let [ cartCount, setCount ] = useState(0);
+    let num = 1;
+    
+    let addCount = () => {       
+        setCount( count => count + 1 )
+        localStorage.setItem('chosenNumbers', num)
     } 
 
     return (
@@ -20,9 +23,9 @@ export default function GameBox() {
                     <table>
                         <tbody>
                             <tr>
-                                <Cell addCount={addCount} num={1} />
-                                <Cell addCount={addCount} num={2} />
-                                <Cell addCount={addCount} num={3} />
+                                <Cell addCount={addCount} num={num++} />
+                                <Cell addCount={addCount} num={num++} />
+                                <Cell addCount={addCount} num={num++} />
                                 <Cell addCount={addCount} num={4} />
                                 <Cell addCount={addCount} num={5} />
                                 <Cell addCount={addCount} num={6} />

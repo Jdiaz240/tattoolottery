@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 
 
 const Cell = (props) => {
+    
     return (
         <td>
             <Button onClick={props.addCount} variant='dark' className='numBut' >

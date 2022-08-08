@@ -17,7 +17,7 @@ function Header() {
                         <Nav.Link className='links' href='https://www.instagram.com/Lunarkitty___/'>Instagram</Nav.Link>
                         <Nav.Link className='links' href='https://www.tiktok.com/@lunarkitty___?lang=en'>Tik Tok</Nav.Link>
                         <Nav.Link className='links' href='mailto:lunarkittytattoos@gmail.com'>Email</Nav.Link>
-                        <Nav.Link className='links' href='#home'>About</Nav.Link>
+                        <Nav.Link className='links' href='/aboutme'>About</Nav.Link>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
