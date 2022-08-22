@@ -1,7 +1,6 @@
 import './gameBox.css'
 // import { useState, useEffect } from 'react'
-// import Button from 'react-bootstrap/Button';
-// import  ShoppingCart from '../ShoppingCart';
+import  ShoppingCart from '../ShoppingCart';
 import Cell from '../Cell'
 
 
@@ -9,6 +8,7 @@ import Cell from '../Cell'
 
 export default function GameBox() {
     let numbers = []
+    
     return (
         <>
             <div className='container'>
@@ -138,7 +138,7 @@ export default function GameBox() {
                             </tr> 
                         </tbody>
                     </table>
-                    {/* <ShoppingCart cartCount={cartCount}/> */}
+                    <ShoppingCart cartCount={0}/>
                 </div>
             </div>
         </>
