@@ -1,20 +1,14 @@
 import './gameBox.css'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 // import Button from 'react-bootstrap/Button';
-import  ShoppingCart from '../ShoppingCart';
+// import  ShoppingCart from '../ShoppingCart';
 import Cell from '../Cell'
 
 
 
-export default function GameBox() {
-    let [ cartCount, setCount ] = useState(0);
-    let num = 1;
-    
-    let addCount = () => {       
-        setCount( count => count + 1 )
-        localStorage.setItem('chosenNumbers', num)
-    } 
 
+export default function GameBox() {
+    let numbers = []
     return (
         <>
             <div className='container'>
@@ -23,128 +17,128 @@ export default function GameBox() {
                     <table>
                         <tbody>
                             <tr>
-                                <Cell addCount={addCount} num={num++} />
-                                <Cell addCount={addCount} num={num++} />
-                                <Cell addCount={addCount} num={num++} />
-                                <Cell addCount={addCount} num={4} />
-                                <Cell addCount={addCount} num={5} />
-                                <Cell addCount={addCount} num={6} />
-                                <Cell addCount={addCount} num={7} />
-                                <Cell addCount={addCount} num={8} />
-                                <Cell addCount={addCount} num={9} />
-                                <Cell addCount={addCount} num={10} />
+                                <Cell numbers={numbers} num={1}/>
+                                <Cell numbers={numbers} num={2} />
+                                <Cell numbers={numbers} num={3} />
+                                <Cell numbers={numbers} num={4} />
+                                <Cell numbers={numbers} num={5} />
+                                <Cell numbers={numbers} num={6} />
+                                <Cell numbers={numbers} num={7} />
+                                <Cell numbers={numbers} num={8} />
+                                <Cell numbers={numbers} num={9} />
+                                <Cell numbers={numbers} num={10} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={11} />
-                                <Cell addCount={addCount} num={12} />
-                                <Cell addCount={addCount} num={13} />
-                                <Cell addCount={addCount} num={14} />
-                                <Cell addCount={addCount} num={15} />
-                                <Cell addCount={addCount} num={16} />
-                                <Cell addCount={addCount} num={17} />
-                                <Cell addCount={addCount} num={18} />
-                                <Cell addCount={addCount} num={19} />
-                                <Cell addCount={addCount} num={20} />
+                                <Cell numbers={numbers}  num={11} />
+                                <Cell numbers={numbers}  num={12} />
+                                <Cell numbers={numbers}  num={13} />
+                                <Cell numbers={numbers}  num={14} />
+                                <Cell numbers={numbers}  num={15} />
+                                <Cell numbers={numbers}  num={16} />
+                                <Cell numbers={numbers}  num={17} />
+                                <Cell numbers={numbers}  num={18} />
+                                <Cell numbers={numbers}  num={19} />
+                                <Cell numbers={numbers}  num={20} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={21} />
-                                <Cell addCount={addCount} num={22} />
-                                <Cell addCount={addCount} num={23} />
-                                <Cell addCount={addCount} num={24} />
-                                <Cell addCount={addCount} num={25} />
-                                <Cell addCount={addCount} num={26} />
-                                <Cell addCount={addCount} num={27} />
-                                <Cell addCount={addCount} num={28} />
-                                <Cell addCount={addCount} num={29} />
-                                <Cell addCount={addCount} num={30} />
+                                <Cell numbers={numbers}  num={21} />
+                                <Cell numbers={numbers}  num={22} />
+                                <Cell numbers={numbers}  num={23} />
+                                <Cell numbers={numbers}  num={24} />
+                                <Cell numbers={numbers}  num={25} />
+                                <Cell numbers={numbers}  num={26} />
+                                <Cell numbers={numbers}  num={27} />
+                                <Cell numbers={numbers}  num={28} />
+                                <Cell numbers={numbers}  num={29} />
+                                <Cell numbers={numbers}  num={30} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={31} />
-                                <Cell addCount={addCount} num={32} />
-                                <Cell addCount={addCount} num={33} />
-                                <Cell addCount={addCount} num={34} />
-                                <Cell addCount={addCount} num={35} />
-                                <Cell addCount={addCount} num={36} />
-                                <Cell addCount={addCount} num={37} />
-                                <Cell addCount={addCount} num={38} />
-                                <Cell addCount={addCount} num={39} />
-                                <Cell addCount={addCount} num={40} />
+                                <Cell numbers={numbers}  num={31} />
+                                <Cell numbers={numbers}  num={32} />
+                                <Cell numbers={numbers}  num={33} />
+                                <Cell numbers={numbers}  num={34} />
+                                <Cell numbers={numbers}  num={35} />
+                                <Cell numbers={numbers}  num={36} />
+                                <Cell numbers={numbers}  num={37} />
+                                <Cell numbers={numbers}  num={38} />
+                                <Cell numbers={numbers}  num={39} />
+                                <Cell numbers={numbers}  num={40} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={41} />
-                                <Cell addCount={addCount} num={42} />
-                                <Cell addCount={addCount} num={43} />
-                                <Cell addCount={addCount} num={44} />
-                                <Cell addCount={addCount} num={45} />
-                                <Cell addCount={addCount} num={46} />
-                                <Cell addCount={addCount} num={47} />
-                                <Cell addCount={addCount} num={48} />
-                                <Cell addCount={addCount} num={49} />
-                                <Cell addCount={addCount} num={50} />
+                                <Cell numbers={numbers}  num={41} />
+                                <Cell numbers={numbers}  num={42} />
+                                <Cell numbers={numbers}  num={43} />
+                                <Cell numbers={numbers}  num={44} />
+                                <Cell numbers={numbers}  num={45} />
+                                <Cell numbers={numbers}  num={46} />
+                                <Cell numbers={numbers}  num={47} />
+                                <Cell numbers={numbers}  num={48} />
+                                <Cell numbers={numbers}  num={49} />
+                                <Cell numbers={numbers}  num={50} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={51} />
-                                <Cell addCount={addCount} num={52} />
-                                <Cell addCount={addCount} num={53} />
-                                <Cell addCount={addCount} num={54} />
-                                <Cell addCount={addCount} num={55} />
-                                <Cell addCount={addCount} num={56} />
-                                <Cell addCount={addCount} num={57} />
-                                <Cell addCount={addCount} num={58} />
-                                <Cell addCount={addCount} num={59} />
-                                <Cell addCount={addCount} num={60} />
+                                <Cell numbers={numbers}  num={51} />
+                                <Cell numbers={numbers}  num={52} />
+                                <Cell numbers={numbers}  num={53} />
+                                <Cell numbers={numbers}  num={54} />
+                                <Cell numbers={numbers}  num={55} />
+                                <Cell numbers={numbers}  num={56} />
+                                <Cell numbers={numbers}  num={57} />
+                                <Cell numbers={numbers}  num={58} />
+                                <Cell numbers={numbers}  num={59} />
+                                <Cell numbers={numbers}  num={60} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={61} />
-                                <Cell addCount={addCount} num={62} />
-                                <Cell addCount={addCount} num={63} />
-                                <Cell addCount={addCount} num={64} />
-                                <Cell addCount={addCount} num={65} />
-                                <Cell addCount={addCount} num={66} />
-                                <Cell addCount={addCount} num={67} />
-                                <Cell addCount={addCount} num={68} />
-                                <Cell addCount={addCount} num={69} />
-                                <Cell addCount={addCount} num={70} />
+                                <Cell numbers={numbers}  num={61} />
+                                <Cell numbers={numbers}  num={62} />
+                                <Cell numbers={numbers}  num={63} />
+                                <Cell numbers={numbers}  num={64} />
+                                <Cell numbers={numbers}  num={65} />
+                                <Cell numbers={numbers}  num={66} />
+                                <Cell numbers={numbers}  num={67} />
+                                <Cell numbers={numbers}  num={68} />
+                                <Cell numbers={numbers}  num={69} />
+                                <Cell numbers={numbers}  num={70} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={71} />
-                                <Cell addCount={addCount} num={72} />
-                                <Cell addCount={addCount} num={73} />
-                                <Cell addCount={addCount} num={74} />
-                                <Cell addCount={addCount} num={75} />
-                                <Cell addCount={addCount} num={76} />
-                                <Cell addCount={addCount} num={77} />
-                                <Cell addCount={addCount} num={78} />
-                                <Cell addCount={addCount} num={79} />
-                                <Cell addCount={addCount} num={80} />
+                                <Cell numbers={numbers}  num={71} />
+                                <Cell numbers={numbers}  num={72} />
+                                <Cell numbers={numbers}  num={73} />
+                                <Cell numbers={numbers}  num={74} />
+                                <Cell numbers={numbers}  num={75} />
+                                <Cell numbers={numbers}  num={76} />
+                                <Cell numbers={numbers}  num={77} />
+                                <Cell numbers={numbers}  num={78} />
+                                <Cell numbers={numbers}  num={79} />
+                                <Cell numbers={numbers}  num={80} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={81} />
-                                <Cell addCount={addCount} num={82} />
-                                <Cell addCount={addCount} num={83} />
-                                <Cell addCount={addCount} num={84} />
-                                <Cell addCount={addCount} num={85} />
-                                <Cell addCount={addCount} num={86} />
-                                <Cell addCount={addCount} num={87} />
-                                <Cell addCount={addCount} num={88} />
-                                <Cell addCount={addCount} num={89} />
-                                <Cell addCount={addCount} num={90} />
+                                <Cell numbers={numbers}  num={81} />
+                                <Cell numbers={numbers}  num={82} />
+                                <Cell numbers={numbers}  num={83} />
+                                <Cell numbers={numbers}  num={84} />
+                                <Cell numbers={numbers}  num={85} />
+                                <Cell numbers={numbers}  num={86} />
+                                <Cell numbers={numbers}  num={87} />
+                                <Cell numbers={numbers}  num={88} />
+                                <Cell numbers={numbers}  num={89} />
+                                <Cell numbers={numbers}  num={90} />
                             </tr>
                             <tr>
-                                <Cell addCount={addCount} num={91} />
-                                <Cell addCount={addCount} num={92} />
-                                <Cell addCount={addCount} num={93} />
-                                <Cell addCount={addCount} num={94} />
-                                <Cell addCount={addCount} num={95} />
-                                <Cell addCount={addCount} num={96} />
-                                <Cell addCount={addCount} num={97} />
-                                <Cell addCount={addCount} num={98} />
-                                <Cell addCount={addCount} num={99} />
-                                <Cell addCount={addCount} num={100} />
-                            </tr>
+                                <Cell numbers={numbers}  num={91} />
+                                <Cell numbers={numbers}  num={92} />
+                                <Cell numbers={numbers}  num={93} />
+                                <Cell numbers={numbers}  num={94} />
+                                <Cell numbers={numbers}  num={95} />
+                                <Cell numbers={numbers}  num={96} />
+                                <Cell numbers={numbers}  num={97} />
+                                <Cell numbers={numbers}  num={98} />
+                                <Cell numbers={numbers}  num={99} />
+                                <Cell numbers={numbers}  num={100} />
+                            </tr> 
                         </tbody>
                     </table>
-                    <ShoppingCart cartCount={cartCount}/>
+                    {/* <ShoppingCart cartCount={cartCount}/> */}
                 </div>
             </div>
         </>
