@@ -7,7 +7,6 @@ export default function Timer() {
         <Countdown date={endDate}>
             <p>All Done</p>
         </Countdown>
-      
     </div>
   )
 }
