@@ -1,40 +1,41 @@
-const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
-const path = require('path');
+require('dotenv').config();
 
-const { typeDefs, resolvers } = require('./schemas');
-const db = require('./config/connection');
+const express = require('express')
+const app = express()
 
-const PORT = process.env.PORT || 3001;
-const app = express();
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
+app.use(express.json())
+app.use(express.static('public'))
+const stripe = require('stripe')(process.env.stripekey)
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+const storeItems = new Map([
+    [1, { priceInCents: 2000, name: 'number' }],
+    [2, { priceInCents: 2000, name: 'number' }],
+])
+app.post('/create-checkout-session', async (req, res) => {
+    try {
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ['card'],
+            mode: 'payment',
+            line_items: req.body.items.map(item => {
+                const storedItem = storeItems.get(item.id)
+                return {
+                    price_data: {
+                        currency: 'usd',
+                        product_data: {
+                            name: storeItems.name
+                        },
+                        unit_amount: storeItems.priceInCents
+                    },
+                    quantity: item.quantity
+                }
+            }),
+            success_url: `${process.env.SERVER_URL}/success.html`,
+            cancel_url: `${process.env.SERVER_URL}/cancel.html`,
+        })
+        res.json({ url: session.url })
+    } catch (e) {
+        res.status(500).json({ error: e.message })
+    }
+})
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-
-// Create a new instance of an Apollo server with the GraphQL schema
-const startApolloServer = async (typeDefs, resolvers) => {
-  await server.start();
-  server.applyMiddleware({ app });
-  
-  db.once('open', () => {
-    app.listen(PORT, () => {
-      console.log(`API server running on port ${PORT}!`);
-      console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-    })
-  })
-  };
-  
-  // Call the async function to start the server
-  startApolloServer(typeDefs, resolvers);
+app.listen(3000)
