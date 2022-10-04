@@ -16,7 +16,7 @@ export default function GameBox() {
             <div className='container'>
                 <div id='gameBox'>
                     <h2>Pick Your Numbers:</h2>
-                    <table>
+                    <table id='table'>
                         <tbody>
                             <tr>
                                 <Cell numbers={numbers} setCount={setCount} num={1} />
